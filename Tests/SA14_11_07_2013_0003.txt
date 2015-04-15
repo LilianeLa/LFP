@@ -1,0 +1,133 @@
+>> principal(SA14_11_07_2013_0003_0_250.values)
+ 
+*********************************************************************************************************
+                                       I. DETECTION OF ARTIFACTS                                         
+*********************************************************************************************************
+ 
+A1 begins at 18.7257s;    18.7259s: end of fast comp.;    18.914s: end of first slow comp.
+                                                           18.914s: real end (arbitrary as no ZC has been found with def.endslow)
+                                                           Perhaps SW after. Sth above diapason (18.914s to 19.564s)
+ 
+A2 begins at 121.1533s;    121.1794s: end of fast comp.;    121.6233s: end of first slow comp.
+                                                           122.7841s: end of total slow comp.
+                                                           Sth above diapason (121.6233s to 122.2733s)
+ 
+A3 begins at 141.7395s;    141.7395s: end of fast comp.;            (there's no slow comp.)
+                                                           142.4775s: end of total slow comp.
+                                                           Sth above diapason (141.7395s to 142.3895s)
+ 
+A4 begins at 150.9316s;    150.9964s: end of fast comp.;    152.5472s: end of first slow comp.
+                                                           153.3271s: end of total slow comp.
+                                                           Sth above diapason (152.5472s to 153.1973s)
+ 
+A5 begins at 167.338s;    167.338s: end of fast comp.;    168.7362s: end of first slow comp.
+                                                           172.8397s: end of total slow comp.
+                                                           Sth above diapason (168.7362s to 169.3862s)
+ 
+A6 begins at 211.1148s;    211.2003s: end of fast comp.;    212.374s: end of first slow comp.
+                                                           215.1147s: end of total slow comp.
+                                                           Sth above diapason (212.374s to 213.024s)
+ 
+A7 begins at 227.5794s;    227.5794s: end of fast comp.;            (there's no slow comp.)
+                                                           227.5794s: end of total slow comp.
+                                                           Nothing above diapason from 227.5794s to 228.2294s
+ 
+A8 begins at 231.1098s;    231.1795s: end of fast comp.;    231.8273s: end of first slow comp.
+                                                           231.8273s: end of total slow comp.
+                                                           Nothing above diapason from 231.8273s to 232.4773s
+ 
+A9 begins at 234.9893s;    235.9134s: end of fast comp.;    236.6627s: end of first slow comp.
+      Something above diapason (236.6627s to 237.3126s).       239.3164s: end of total slow comp.
+ 
+ 
+*********************************************************************************************************
+                                      II. DETECTION OF SLOW WAVES                                        
+*********************************************************************************************************
+ 
+ 
+SW1:    -34.3393 microV at 62.975s;    23.3698 microV at 63.1853s			% Could be a P300
+ 
+SW2:    -31.3733 microV at 75.147s;    22.6216 microV at 75.6062s
+ 
+SW3:    -37.3324 microV at 79.5923s;    21.5696 microV at 80.1038s
+ 
+SW4:    -52.4922 microV at 80.7528s;    40.5454 microV at 81.4665s
+ 
+SW5:    -20.6396 microV at 83.3499s;    23.9857 microV at 83.6722s
+ 
+SW6:    -21.8653 microV at 84.8278s;    23.2795 microV at 85.0238s
+ 
+SW7:    -32.7045 microV at 90.0769s;    34.3102 microV at 90.3833s			% Could be a BP
+ 
+SW8:    -38.8562 microV at 92.8844s;    35.942 microV at 93.2181s			% Could be a P300
+ 
+SW9:    -41.786 microV at 93.472s;    29.1501 microV at 93.6588s			% Could be a P300 (idem)
+ 
+SW10:    -22.3912 microV at 94.2332s;    34.0925 microV at 94.4167s			% Could be a P300 (idem)
+ 
+SW11:    -47.1329 microV at 97.0363s;    45.0458 microV at 97.3495s			% Could be a P300 (idem)
+ 
+SW12:    -30.1374 microV at 97.7335s;    42.6232 microV at 98.0405s
+ 
+SW13:    -27.7036 microV at 98.3735s;    27.1435 microV at 98.8157s
+ 
+SW14:    -50.7893 microV at 100.9714s;    61.472 microV at 101.2159s
+ 
+SW15:    -61.8517 microV at 103.93s;    36.0024 microV at 105.0764s
+ 
+SW16:    -25.4135 microV at 107.3438s;    23.3134 microV at 107.7922s
+ 
+SW17:    -22.3226 microV at 110.4698s;    26.2574 microV at 110.8746s
+ 
+SW18:    -36.3143 microV at 111.1522s;    24.5684 microV at 111.5419s
+ 
+SW19:    -21.4174 microV at 111.7662s;    37.8382 microV at 112.9143s
+ 
+SW20:    -32.5012 microV at 118.6473s;    20.701 microV at 118.8782s
+ 
+SW21:    -28.7091 microV at 119.0189s;    32.5676 microV at 119.5475s
+ 
+SW22:    -26.635 microV at 120.4005s;    23.0889 microV at 121.1483s		% just before the artifact. SW or not ?
+ 
+SW23:    -30.3955 microV at 128.2198s;    23.953 microV at 128.4214s
+ 
+SW24:    -25.2857 microV at 129.3655s;    31.8818 microV at 129.5808s
+ 
+SW25:    -29.3761 microV at 129.8121s;    28.6547 microV at 130.3546s
+ 
+SW26:    -45.6527 microV at 134.896s;    20.6607 microV at 135.331s
+ 
+SW27:    -61.8117 microV at 159.3108s;    14.0291 microV at 159.7613s
+ 
+SW28:    -31.104 microV at 165.9836s;    16.8787 microV at 166.4009s
+ 
+SW29:    -65.4076 microV at 177.0544s;    7.0273 microV at 177.3047s
+ 
+SW30:    -22.9161 microV at 183.851s;    74.5494 microV at 184.2705s
+ 
+SW31:    -120.2803 microV at 184.4949s;    43.3128 microV at 184.6931s
+ 
+SW32:    -83.3737 microV at 184.9889s;    14.9391 microV at 185.8326s
+ 
+SW33:    -24.9705 microV at 187.0929s;    19.9207 microV at 187.4926s
+ 
+SW34:    -90.546 microV at 188.2928s;    10.1903 microV at 188.8945s
+ 
+SW35:    -31.0769 microV at 191.874s;    24.1386 microV at 192.1239s
+ 
+SW36:    -21.8548 microV at 196.5877s;    28.1042 microV at 196.9854s
+ 
+SW37:    -41.317 microV at 205.8622s;    24.9315 microV at 205.9752s
+ 
+SW38:    -37.0147 microV at 206.1693s;    18.9509 microV at 206.4979s
+ 
+SW39:    -57.132 microV at 221.1922s;    6.007 microV at 221.2902s
+ 
+SW40:    -50.6822 microV at 225.9645s;    35.494 microV at 226.2985s
+ 
+SW41:    -30.5346 microV at 226.3757s;    44.3224 microV at 226.6762s
+ 
+SW42:    -106.8299 microV at 232.6317s;    49.0195 microV at 233.4782s
+ 
+----> 42 slow waves detected
+>> 
