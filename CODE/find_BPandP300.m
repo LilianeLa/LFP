@@ -4,11 +4,16 @@
 % A list with the moments of operant actions (in seconds) with the indication of whether there is a BP or not, is displayed. 
 % In the end is also displayed the total number of OA and the number of OA having at least one BP.
 
-% 1. You can rename the channel 11 into 'ttl' for facility		(but not necessary)
-% 2. Please run principal.m because we need 'SW'. Or open the corresponding 'SW.mat' if already saved.
+% 1. If you run principal.m : 				Please rename the channel 11 into 'ttl' (necessary to do it because it's named 'ttl' in the code)
+% 2. If you don't run principal code, but only run find_BPandP300: 
+%		- Either run principal_NOcorrelation.m: 	gives 'SW' as we need 'SW'. 
+% 
+% 			e.g. >> 			SW = principal(SA34_20_06_2014_0003.values);						% !! Don't forget 'SW' otherwise 'SW' won't be saved in the workspace			% Don't forget ';' because we don't want to display SW
+% 	   			 >> 			find_BPandP300(ttl.times, SW)
+% 
+% 		- Or open the corresponding 'SW.mat' if already saved.
+% 	   			 >> 			find_BPandP300(ttl.times, SW)
 
-% e.g. >> 			SW = principal(SA34_20_06_2014_0003.values);						% !! Don't forget 'SW' otherwise 'SW' won't be saved in the workspace						% Don't forget ';' because we don't want to display SW
-% 	   >> 			find_BP(ttl.times, SW)
 
 % INPUT: We need: 
 % - TTL signal, which is a vector indicating moments of up-down and down-up of operant actions. Element 1 will always be an up-down. up-down are odd indexes and down-up are even indexes.
@@ -16,8 +21,10 @@
 
 
 function find_BPandP300(vertical, SW)				% The input is in fact ttl.times but we can't write "function find_BP(ttl.times)" although we can write "find_BP(ttl.times)"	in the prompt
-global def			% global SW
-% oa 									% oa = ttl.times
+global def			
+% global def SW			% useless because SW is input. (Moreover, putting it gives a WARNING-message.)
+
+% oa 					% oa = ttl.times
 
 lfp_defaults;				
 oa = zeros(length(vertical)/2, 1);
