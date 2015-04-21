@@ -18,10 +18,10 @@
 %		- Either run principal_NOcorrelation.m: 	gives 'SW' as we need 'SW'. 
 % 
 % 			e.g. >> 			SW = principal(SA34_20_06_2014_0003.values);						% !! Don't forget 'SW' otherwise 'SW' won't be saved in the workspace			% Don't forget ';' because we don't want to display SW
-% 	   			 >> 			find_BP_P300_randSW(ttl.times, SW, SA14_11_07_2013_0003.values)		% !! Don't forget 'values' otherwise length(V)=1
+% 	   			 >> 			find_BP_P300_randSW(ttl.times, SW, SA34_20_06_2014_0003.values)		% !! Don't forget 'values' otherwise length(V)=1
 % 
 % 		- Or open the corresponding 'SW.mat' if already saved.
-% 	   			 >> 			find_BP_P300_randSW(ttl.times, SW, SA14_11_07_2013_0003.values)		% !! Don't forget 'values' otherwise length(V)=1
+% 	   			 >> 			find_BP_P300_randSW(ttl.times, SW, SA34_20_06_2014_0003.values)		% !! Don't forget 'values' otherwise length(V)=1
 
 
 % INPUT: We need: 
