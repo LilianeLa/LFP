@@ -39,7 +39,8 @@ disp('**************************************************************************
 % find_BPandP300_SWvalminvalmax(vertical, SW);
 % find_BP_P300_randSW(vertical, SW);			% FAUX
 
-find_BP_P300_randSW(vertical, SW, V);
+% find_BP_P300_randSW(vertical, SW, V);
+find_BP_P300_randSW_modifOA(vertical, SW, V);
 % find_BP_P300_randSW_essai(vertical, SW, V);
 
 % close all
