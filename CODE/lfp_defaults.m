@@ -48,4 +48,7 @@ def.SWlength      	= [100 1250 1500];		% duration of negative peak: between 100 
 % def.SWmAmpl       = [-25 49]; 			
 def.SWmAmpl       = [-20 40]; 			
 
+def.OAsemiwindow = 5;
+
+
 return		% end 
