@@ -230,8 +230,12 @@ if iHighBHP ~=0					% if ~isempty(iHighBHP)						% We examine the last artifact 
 				 '       ?: end of first slow comp. (no ZC found)']);				
 		end 		
 		
-		% red(iHighBHP(end)+1 :ZC) = V(iHighBHP(end)+1 :ZC);
-		red(iHighBHP(end)+1 :endplot) = V(iHighBHP(end)+1 :endplot);
+		if endplot < length(V)
+			% red(iHighBHP(end)+1 :ZC) = V(iHighBHP(end)+1 :ZC);
+			red(iHighBHP(end)+1 :endplot) = V(iHighBHP(end)+1 :endplot);
+		else 
+			red(iHighBHP(end)+1 :end) = V(iHighBHP(end)+1 :end);
+		end	
 		
 		% Diapason not here as it's possible there's a slow component further even if the slow component has not yet been detected. 
 	else 
