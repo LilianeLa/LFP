@@ -44,6 +44,7 @@ for i = 1:length(oa)				% until the last OA up-down, where up-down is an odd ind
 	if vertical(2*i) - vertical(2*i-1) > 2 
 		oa(i) = vertical(2*i-1);	
 		countOA=countOA+1; 		
+		duration = vertical(2*i) - vertical(2*i-1);
 		
 		%% BP 
 		indexBP = find([SW(1,:).negpeak_seconds] > (oa(i)-def.OAsemiwindow)  &  [SW(1,:).negpeak_seconds] < oa(i) );	% gives the order number of SW of the list of SWs, which is detected as a BP. Ex: If indexBP=1, it means the first SW in the list is a BP
@@ -53,7 +54,9 @@ for i = 1:length(oa)				% until the last OA up-down, where up-down is an odd ind
 		if ~isempty(indexBP) 				% in the case we have found something as a BP, then we can find the time of the BP. (It has no sense to search the time of BP if we haven't found any BP)
 			countBP = countBP+1;			% We only add 1, not 2 or 3 because, even if we find 2 BP or more for 1 OA, it has no importance. We only want to see if there is AT LEAST one BP per OA.
 			disp(' ');
-			disp(['OA', num2str(i), ' occurs at ', num2str(oa(i)), 's']);
+			% disp(['OA', num2str(i), ' occurs at ', num2str(oa(i)), 's']);
+			% disp(['OA', num2str(i), ': [', num2str(oa(i)), 's, ', num2str(vertical(2*i)), 's];  duration: ', num2str(duration), 's']);
+			disp(['OA', num2str(countOA), ': [', num2str(oa(i)), 's, ', num2str(vertical(2*i)), 's];  duration: ', num2str(duration), 's']);
 			if length(indexBP) == 1
 				disp(['     -> Possible BP:    ', num2str(SW(1,indexBP).valmin), ' microV at ', num2str(SW(1,indexBP).negpeak_seconds), 's;    ', num2str(SW(1,indexBP).valmax), ' microV at ', num2str(SW(1,indexBP).pospeak_seconds), 's']);
 			elseif length(indexBP) == 2 	
@@ -71,7 +74,7 @@ for i = 1:length(oa)				% until the last OA up-down, where up-down is an odd ind
 			end 	
 		else 	
 			disp(' ');
-			disp(['OA', num2str(i), ' occurs at ', num2str(oa(i)), 's']);
+			disp(['OA', num2str(countOA), ': [', num2str(oa(i)), 's, ', num2str(vertical(2*i)), 's];  duration: ', num2str(duration), 's']);
 			disp(['     -> No BP detected'])
 		end		
 		
@@ -122,12 +125,15 @@ end
 oa_new = find(oa ~= 0);			% or 		find (oa > 0 )
 
 disp(' ');
+if countOA ~= 0 
+	disp('*********************************************************************************************************');
+end	
+% disp('---------------------------------------------------------------------------------------------------------');
+% disp('************************************* List of random windows ********************************************');
 disp(' ');
 %% Find if there is at least 1 SW in each window
-
 % for i = 1 : length(oa)														% Reduce the length of oa; otherwise it will put a window around each oa < 2 seconds, which is an inconvenient because it detects more random slow waves which are not necessary
 for i = 1 : length(oa_new)
-
 	% Update the zone of accessible and authorized centers 
 	possiblecenters = find(deadzone == 0);										% for the first iteration, this is simple because deadzone is the first deadzone determined. But at each iteration, possiblecenters is updated because at each iteration a new part of 'deadzone' will be added
 	
@@ -140,7 +146,7 @@ for i = 1 : length(oa_new)
 	end 
 	
 	if randcenter-def.OAsemiwindow >0 
-		randwindow = [randcenter-def.OAsemiwindow, randcenter+def.OAsemiwindow];	%  colon for the lowerbound, 1 colon for the upperbound
+		randwindow = [randcenter-def.OAsemiwindow, randcenter+def.OAsemiwindow];	% 1 colon for the lowerbound, 1 colon for the upperbound
 	else 
 		randwindow = [1, randcenter+def.OAsemiwindow];
 	end
