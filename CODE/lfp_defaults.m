@@ -53,4 +53,4 @@ def.OAsemiwindow = 5;
 % def.minimal_duration_OA = 2.8;				% The algorithm will detect both 3 and 6 sec OAs 
 def.minimal_duration_OA = 5.8;				% The algorithm will detect only 6 sec OAs
 
-return		% end 
+return		% end   
