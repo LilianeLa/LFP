@@ -41,7 +41,7 @@ countrandSW = 0;
 deadzone = zeros(ceil(length(V)/def.rate), 1);		% The indexes of deadzone are IN SECONDS, not in INDEXES
 
 for i = 1:length(oa)				% until the last OA up-down, where up-down is an odd index of 'vertical' as the first up-down is the index 1 of 'vertical'. We suppose 'vertical' is of even length as we admit the last element is a down-up. 
-	if vertical(2*i) - vertical(2*i-1) > 2 
+	if vertical(2*i) - vertical(2*i-1) > def.minimal_duration_OA	
 		oa(i) = vertical(2*i-1);	
 		countOA=countOA+1; 		
 		duration = vertical(2*i) - vertical(2*i-1);
